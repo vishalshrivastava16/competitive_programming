@@ -1,0 +1,92 @@
+/*
+  Vishal Shrivastava
+  i_am_kirito
+
+  look up to the sky,keep up(don't let go)
+  I'll look towards the sky, without any doubt...
+  
+  never let you go,never let you go.
+  till the light shines stronger, I go.
+*/
+#include <bits/stdc++.h>
+using namespace std;
+#define minpq priority_queue <int, vector<int>, greater<int> >
+#define maxpq  priority_queue <int>
+#define F first
+#define S second
+#define mp make_pair
+#define pb push_back
+#define f(i,x,n) for(int i=x;i<n;i++)
+#define all(c) c.begin(),c.end()
+#define ll long long
+#define int ll
+#define pll pair<ll,ll>
+#define pii pair<int,int>
+const int mod = 1e9+7, N = 4e5 + 10;
+void solve()
+{
+	int n;
+	cin>>n;
+	string a,b;
+	cin>>a>>b;
+	int co=0;
+	vector<int> op;
+	for(int i=1;i<n;i++)
+	{
+		if(a[i]!=a[i-1])
+		{
+			co++;
+			op.pb(i-1);
+		}
+	}
+	// // for(int i=0;i<n;i++)
+	// // 	cout<<a[i]<<" ";
+	// cout<<"\n";
+
+	if(a[n-1]=='0')
+	{
+		co++;
+		op.pb(n-1);
+	}
+	vector<int> op2;
+	for(int i=1;i<n;i++)
+	{
+		if(b[i]!=b[i-1])
+		{
+			co++;
+			op2.pb(i-1);
+		}
+	}
+	// for(int i=0;i<n;i++)
+	// 	cout<<b[i]<<" ";
+	// cout<<"\n";
+	if(b[n-1]=='0')
+	{
+		co++;
+		op2.pb(n-1);
+	}
+	reverse(all(op2));
+	cout<<co<<" ";
+	for(int i=0;i<op.size();i++)
+	{
+		cout<<op[i]+1<<" ";
+	}
+	for(int i=0;i<op2.size();i++)
+	{
+		cout<<op2[i]+1<<" ";
+	}
+	cout<<"\n";
+    return;
+}
+ 
+int32_t main(){
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+  int test=1;
+  cin>>test;
+  while(test--)
+  {
+    solve();
+  }
+}
