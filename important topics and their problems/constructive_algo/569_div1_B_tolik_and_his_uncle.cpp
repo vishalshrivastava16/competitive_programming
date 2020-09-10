@@ -1,6 +1,7 @@
-// problem link:   https://codeforces.com/problemset/problem/1179/B 
+// problem link:   https://codeforces.com/problemset/problem/1179/B  
 
 /*
+	CF Rating: 1800
     logic: Very nice problem if solved by on your own. Requires no algo just some constructive method to visit each cell of a matrix without repeating any.
 */
 
